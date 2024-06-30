@@ -1,0 +1,14 @@
+{% extends 'customers/base.html' %}
+
+{% block title %}Customer List{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Customer List</h1>
+<ul class="list-group">
+    {% for customer in customers %}
+        <li class="list-group-item">
+            {{ customer.customer_id }} - {{ customer.customer_name }} <br>&nbsp;Aadhaar No: {{ customer.aadhaar_no }} <br>&nbsp;Current Plan: {{ customer.current_plan }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

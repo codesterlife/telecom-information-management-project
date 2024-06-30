@@ -1,0 +1,26 @@
+{% extends 'customers/base.html' %}
+
+{% block title %}Search Customer{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Search Customer | Telecom Information Management System</h1>
+<form method="get" class="form-inline mb-4">
+    <input type="text" name="q" class="form-control mr-2" placeholder="Search by ID or Name">
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+{% if search_performed %}
+<h2>Results:</h2>
+<ul class="list-group">
+    {% for customer in customers %}
+        <li class="list-group-item">
+            {{ customer.customer_id }} - {{ customer.customer_name }} - {{ customer.aadhaar_no }} - {{ customer.current_plan }}
+        </li>
+    {% empty %}
+        <li class="list-group-item">No results found</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
