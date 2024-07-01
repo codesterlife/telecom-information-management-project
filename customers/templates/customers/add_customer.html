@@ -3,6 +3,11 @@
 {% block title %}Add Customer | Telecom Information Management System{% endblock %}
 
 {% block content %}
+
+{% include 'customers/navbar.html' %}
+
+<br>
+
 <h1 class="mb-4">Add Customer</h1>
 <form method="post" class="needs-validation" novalidate>
     {% csrf_token %}
@@ -18,6 +23,6 @@
         {{ form.current_plan.label_tag }}
         {{ form.current_plan }}
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-dark">Submit</button>
 </form>
 {% endblock %}

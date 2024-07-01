@@ -1,0 +1,16 @@
+{% extends 'customers/base.html' %}
+
+{% block title %}Telecom Information Management System{% endblock %}
+
+{% block content %}
+<div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+<h1 class="mb-4" style="font-weight: bold;">Telecom Information Management System</h1>
+    <div style="display: flex; ; flex-direction: row;">
+        <a href="{% url 'add_customer' %}" class="btn btn-danger">Add a Customer</a>&nbsp;&nbsp;
+        <a href="{% url 'search_customer' %}" class="btn btn-success">Search for a Customer</a>&nbsp;&nbsp;
+        <a href="{% url 'customer_list' %}" class="btn btn-primary">List Customers</a>
+    </div>
+</div>
+<!-- <a href="{% url 'add_customer' %}" class="btn btn-primary">Add a Customer</a> -->
+
+{% endblock %}

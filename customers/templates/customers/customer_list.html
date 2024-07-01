@@ -3,6 +3,11 @@
 {% block title %}Customer List{% endblock %}
 
 {% block content %}
+
+{% include 'customers/navbar.html' %}
+
+<br>
+
 <h1 class="mb-4">Customer List</h1>
 <ul class="list-group">
     {% for customer in customers %}

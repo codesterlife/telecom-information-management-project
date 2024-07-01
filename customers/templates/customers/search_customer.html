@@ -4,10 +4,14 @@
 
 {% block content %}
 
+{% include 'customers/navbar.html' %}
+
+<br>
+
 <h1 class="mb-4">Search Customer | Telecom Information Management System</h1>
 <form method="get" class="form-inline mb-4">
     <input type="text" name="q" class="form-control mr-2" placeholder="Search by ID or Name">
-    <button type="submit" class="btn btn-primary">Search</button>
+    <button type="submit" class="btn btn-dark">Search</button>
 </form>
 
 {% if search_performed %}

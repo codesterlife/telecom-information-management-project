@@ -4,6 +4,9 @@ from .models import Customer
 from django.db.models import Q
 from django.contrib import messages
 
+def home(request):
+    return render(request, 'customers/index.html')
+
 def add_customer(request):
     if request.method == 'POST':
         form = CustomerForm(request.POST)
